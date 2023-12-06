@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231206 21:17:31.127" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Robotframework" source="C:\Users\delug\Documents\GitHub\test_robotframework">
+<suite id="s1-s1" name="Test Fr" source="C:\Users\delug\Documents\GitHub\test_robotframework\test_fr.robot">
+<test id="s1-s1-t1" name="Login to the system" line="27">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 21:17:31.295" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<msg timestamp="20231206 21:17:31.554" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231206 21:17:31.295" endtime="20231206 21:17:32.932"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:32.939" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231206 21:17:32.932" endtime="20231206 21:17:32.940"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:31.295" endtime="20231206 21:17:32.940"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user04@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:32.942" level="INFO">Typing text 'user04@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231206 21:17:32.940" endtime="20231206 21:17:33.048"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:32.940" endtime="20231206 21:17:33.048"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:33.048" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231206 21:17:33.048" endtime="20231206 21:17:33.116"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:33.048" endtime="20231206 21:17:33.116"/>
+</kw>
+<kw name="Click on the Submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:33.117" level="INFO">Clicking element 'xpath=//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:33.117" endtime="20231206 21:17:33.146"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:33.116" endtime="20231206 21:17:33.146"/>
+</kw>
+<kw name="Assert dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PAGELOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:33.146" endtime="20231206 21:17:34.212"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:34.214" level="INFO">Page title is 'Scouts panel'.</msg>
+<status status="PASS" starttime="20231206 21:17:34.212" endtime="20231206 21:17:34.214"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 21:17:34.283" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="alert.png"&gt;&lt;img src="alert.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 21:17:34.215" endtime="20231206 21:17:34.283"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:33.146" endtime="20231206 21:17:34.283"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231206 21:17:34.283" endtime="20231206 21:17:36.354"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:31.294" endtime="20231206 21:17:36.354"/>
+</test>
+<test id="s1-s1-t2" name="Fill in Add Player form" line="35">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 21:17:36.354" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<msg timestamp="20231206 21:17:36.592" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231206 21:17:36.354" endtime="20231206 21:17:38.008"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:38.013" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231206 21:17:38.008" endtime="20231206 21:17:38.013"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:36.354" endtime="20231206 21:17:38.013"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user04@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:38.014" level="INFO">Typing text 'user04@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231206 21:17:38.014" endtime="20231206 21:17:38.123"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:38.013" endtime="20231206 21:17:38.123"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:38.123" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231206 21:17:38.123" endtime="20231206 21:17:38.190"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:38.123" endtime="20231206 21:17:38.190"/>
+</kw>
+<kw name="Click on the Submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:38.191" level="INFO">Clicking element 'xpath=//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:38.191" endtime="20231206 21:17:38.226"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:38.191" endtime="20231206 21:17:38.226"/>
+</kw>
+<kw name="Assert dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PAGELOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:38.226" endtime="20231206 21:17:39.276"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:39.276" level="INFO">Page title is 'Scouts panel'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.276" endtime="20231206 21:17:39.276"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 21:17:39.360" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="alert.png"&gt;&lt;img src="alert.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 21:17:39.276" endtime="20231206 21:17:39.360"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:38.226" endtime="20231206 21:17:39.360"/>
+</kw>
+<kw name="Click on the Add Player button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADDPLAYERBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:39.361" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Add')]'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.360" endtime="20231206 21:17:39.391"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.360" endtime="20231206 21:17:39.391"/>
+</kw>
+<kw name="Type in name">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FORMNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:39.391" endtime="20231206 21:17:39.453"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FORMNAME}</arg>
+<arg>Pola</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:39.454" level="INFO">Typing text 'Pola' into text field 'xpath=//input[@name='name']'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.453" endtime="20231206 21:17:39.518"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.391" endtime="20231206 21:17:39.518"/>
+</kw>
+<kw name="Type in surname">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FORMSURNAME}</arg>
+<arg>Negri</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:39.519" level="INFO">Typing text 'Negri' into text field 'xpath=//input[@name='surname']'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.518" endtime="20231206 21:17:39.583"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.518" endtime="20231206 21:17:39.583"/>
+</kw>
+<kw name="Type in main position">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FORMPOSITION}</arg>
+<arg>Blocker</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:39.584" level="INFO">Typing text 'Blocker' into text field 'xpath=//input[@name='mainPosition']'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.584" endtime="20231206 21:17:39.645"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.583" endtime="20231206 21:17:39.645"/>
+</kw>
+<kw name="Click on Sumbit in form">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FORMSUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:39.645" level="INFO">Clicking element 'xpath=//button/span[text() = 'Submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.645" endtime="20231206 21:17:39.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FORMSUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:39.698" level="INFO">Clicking element 'xpath=//button/span[text() = 'Submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.698" endtime="20231206 21:17:39.736"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.645" endtime="20231206 21:17:39.736"/>
+</kw>
+<kw name="Assert Form">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FORMAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:39.736" endtime="20231206 21:17:39.752"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${FORMAGE}</arg>
+<arg>Required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231206 21:17:39.752" level="INFO">Verifying element 'xpath=//*[@id='__next']/div[1]/main/div[2]/form/div[2]/div/div[7]/div/p' contains exact text 'Required'.</msg>
+<status status="PASS" starttime="20231206 21:17:39.752" endtime="20231206 21:17:39.767"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.736" endtime="20231206 21:17:39.767"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:36.354" endtime="20231206 21:17:39.767"/>
+</test>
+<test id="s1-s1-t3" name="Clear Add Player form" line="48">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 21:17:39.772" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<msg timestamp="20231206 21:17:40.036" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231206 21:17:39.772" endtime="20231206 21:17:41.447"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:41.452" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231206 21:17:41.447" endtime="20231206 21:17:41.452"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.767" endtime="20231206 21:17:41.452"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user04@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:41.452" level="INFO">Typing text 'user04@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231206 21:17:41.452" endtime="20231206 21:17:41.560"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:41.452" endtime="20231206 21:17:41.560"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:41.560" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231206 21:17:41.560" endtime="20231206 21:17:41.628"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:41.560" endtime="20231206 21:17:41.628"/>
+</kw>
+<kw name="Click on the Submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:41.629" level="INFO">Clicking element 'xpath=//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:41.628" endtime="20231206 21:17:41.663"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:41.628" endtime="20231206 21:17:41.663"/>
+</kw>
+<kw name="Assert dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PAGELOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:41.663" endtime="20231206 21:17:46.229"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:46.232" level="INFO">Page title is 'Scouts panel'.</msg>
+<status status="PASS" starttime="20231206 21:17:46.229" endtime="20231206 21:17:46.232"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 21:17:46.311" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="alert.png"&gt;&lt;img src="alert.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 21:17:46.232" endtime="20231206 21:17:46.311"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:41.663" endtime="20231206 21:17:46.311"/>
+</kw>
+<kw name="Click on the Add Player button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADDPLAYERBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:46.312" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Add')]'.</msg>
+<status status="PASS" starttime="20231206 21:17:46.312" endtime="20231206 21:17:46.350"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:46.311" endtime="20231206 21:17:46.350"/>
+</kw>
+<kw name="Type in name">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FORMNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:46.350" endtime="20231206 21:17:46.404"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FORMNAME}</arg>
+<arg>Pola</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:46.405" level="INFO">Typing text 'Pola' into text field 'xpath=//input[@name='name']'.</msg>
+<status status="PASS" starttime="20231206 21:17:46.404" endtime="20231206 21:17:46.460"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:46.350" endtime="20231206 21:17:46.460"/>
+</kw>
+<kw name="Type in surname">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FORMSURNAME}</arg>
+<arg>Negri</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:46.461" level="INFO">Typing text 'Negri' into text field 'xpath=//input[@name='surname']'.</msg>
+<status status="PASS" starttime="20231206 21:17:46.461" endtime="20231206 21:17:46.526"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:46.461" endtime="20231206 21:17:46.526"/>
+</kw>
+<kw name="Type in main position">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FORMPOSITION}</arg>
+<arg>Blocker</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:46.528" level="INFO">Typing text 'Blocker' into text field 'xpath=//input[@name='mainPosition']'.</msg>
+<status status="PASS" starttime="20231206 21:17:46.526" endtime="20231206 21:17:46.592"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:46.526" endtime="20231206 21:17:46.592"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:39.767" endtime="20231206 21:17:46.592"/>
+</test>
+<test id="s1-s1-t4" name="Change language" line="59">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 21:17:46.594" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<msg timestamp="20231206 21:17:46.854" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231206 21:17:46.594" endtime="20231206 21:17:48.251"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:48.256" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231206 21:17:48.251" endtime="20231206 21:17:48.256"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:46.594" endtime="20231206 21:17:48.256"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user04@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:48.257" level="INFO">Typing text 'user04@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231206 21:17:48.257" endtime="20231206 21:17:48.362"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:48.256" endtime="20231206 21:17:48.362"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:48.362" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231206 21:17:48.362" endtime="20231206 21:17:48.430"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:48.362" endtime="20231206 21:17:48.430"/>
+</kw>
+<kw name="Click on the Submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:48.431" level="INFO">Clicking element 'xpath=//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:48.431" endtime="20231206 21:17:48.462"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:48.431" endtime="20231206 21:17:48.462"/>
+</kw>
+<kw name="Assert dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PAGELOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:48.462" endtime="20231206 21:17:49.310"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:49.316" level="INFO">Page title is 'Scouts panel'.</msg>
+<status status="PASS" starttime="20231206 21:17:49.310" endtime="20231206 21:17:49.316"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 21:17:49.388" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="alert.png"&gt;&lt;img src="alert.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 21:17:49.316" endtime="20231206 21:17:49.388"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:48.462" endtime="20231206 21:17:49.388"/>
+</kw>
+<kw name="Changing language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LANGUAGEMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:49.388" level="INFO">Clicking element 'xpath=//*[@id='__next']/div[1]/div/div/div/ul[2]/div[1]/div[2]/span'.</msg>
+<status status="PASS" starttime="20231206 21:17:49.388" endtime="20231206 21:17:49.437"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:49.388" endtime="20231206 21:17:49.437"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:46.592" endtime="20231206 21:17:49.437"/>
+</test>
+<test id="s1-s1-t5" name="Redirect to players list" line="67">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 21:17:49.437" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<msg timestamp="20231206 21:17:49.699" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231206 21:17:49.437" endtime="20231206 21:17:51.560"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:51.565" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231206 21:17:51.560" endtime="20231206 21:17:51.565"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:49.437" endtime="20231206 21:17:51.565"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user04@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:51.566" level="INFO">Typing text 'user04@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231206 21:17:51.565" endtime="20231206 21:17:51.704"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:51.565" endtime="20231206 21:17:51.704"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:51.704" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231206 21:17:51.704" endtime="20231206 21:17:51.805"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:51.704" endtime="20231206 21:17:51.805"/>
+</kw>
+<kw name="Click on the Submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:51.805" level="INFO">Clicking element 'xpath=//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:51.805" endtime="20231206 21:17:51.899"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:51.805" endtime="20231206 21:17:51.899"/>
+</kw>
+<kw name="Assert dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PAGELOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:51.899" endtime="20231206 21:17:53.597"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:53.601" level="INFO">Page title is 'Scouts panel'.</msg>
+<status status="PASS" starttime="20231206 21:17:53.597" endtime="20231206 21:17:53.601"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 21:17:53.730" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="alert.png"&gt;&lt;img src="alert.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 21:17:53.603" endtime="20231206 21:17:53.730"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:51.899" endtime="20231206 21:17:53.730"/>
+</kw>
+<kw name="Click on players tab">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PLAYERSMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:53.731" level="INFO">Clicking element 'xpath=//*[text()='Players']'.</msg>
+<status status="PASS" starttime="20231206 21:17:53.731" endtime="20231206 21:17:53.780"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:53.730" endtime="20231206 21:17:53.780"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:49.437" endtime="20231206 21:17:53.781"/>
+</test>
+<test id="s1-s1-t6" name="Logout" line="75">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 21:17:53.784" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<msg timestamp="20231206 21:17:54.081" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231206 21:17:53.783" endtime="20231206 21:17:56.180"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:56.185" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231206 21:17:56.180" endtime="20231206 21:17:56.186"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:53.783" endtime="20231206 21:17:56.186"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user04@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:56.187" level="INFO">Typing text 'user04@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231206 21:17:56.186" endtime="20231206 21:17:56.322"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:56.186" endtime="20231206 21:17:56.322"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:56.322" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231206 21:17:56.322" endtime="20231206 21:17:56.404"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:56.322" endtime="20231206 21:17:56.404"/>
+</kw>
+<kw name="Click on the Submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:56.405" level="INFO">Clicking element 'xpath=//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20231206 21:17:56.405" endtime="20231206 21:17:56.445"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:56.405" endtime="20231206 21:17:56.445"/>
+</kw>
+<kw name="Assert dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PAGELOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 21:17:56.445" endtime="20231206 21:17:57.910"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 21:17:57.913" level="INFO">Page title is 'Scouts panel'.</msg>
+<status status="PASS" starttime="20231206 21:17:57.910" endtime="20231206 21:17:57.913"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 21:17:58.007" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="alert.png"&gt;&lt;img src="alert.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 21:17:57.913" endtime="20231206 21:17:58.007"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:56.445" endtime="20231206 21:17:58.007"/>
+</kw>
+<kw name="Sign Out">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGNOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 21:17:58.007" level="INFO">Clicking element 'xpath=//*[@id='__next']/div[1]/div/div/div/ul[2]/div[2]/div[2]/span'.</msg>
+<status status="PASS" starttime="20231206 21:17:58.007" endtime="20231206 21:17:58.048"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:58.007" endtime="20231206 21:17:58.048"/>
+</kw>
+<status status="PASS" starttime="20231206 21:17:53.782" endtime="20231206 21:17:58.048"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20231206 21:17:31.154" endtime="20231206 21:17:58.049"/>
+</suite>
+<status status="PASS" starttime="20231206 21:17:31.127" endtime="20231206 21:17:58.051"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Test Robotframework">Test Robotframework</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Test Fr">Test Robotframework.Test Fr</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231206 21:17:31.554" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231206 21:17:36.592" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231206 21:17:40.036" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231206 21:17:46.854" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231206 21:17:49.699" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231206 21:17:54.081" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\delug\Documents\GitHub\test_robotframework\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.62); currently, chromedriver 120.0.6099.62 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
